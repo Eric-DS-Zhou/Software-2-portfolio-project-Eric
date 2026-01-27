@@ -205,14 +205,15 @@ will likely refine your design to make your implementation easier to use.
     - `int numberOfStudent()`: return the number of students recorded in the data
     - `void clear()`: clean all the records
   - **Secondary Methods**:
-    - `double meanExamScore`: return the mean
-    - `double medianExamScore`
-    - `int highestExamScore`
-    - `int lowestExamScore`
-    - `Map<String, Integer> examRankings(int examNumber)`
-    - `double attendRate`
-    - `double hwCompletionRate`
-    - `void removeStudent`
+    - `double meanExamScore(int examNumber)`: return the mean score for the specified exam
+    - `double medianExamScore(int examNumber)`: return the median score for the specified exam
+    - `int highestExamScore(int examNumber)`: return the highest score for the specified exam
+    - `int lowestExamScore(int examNumber)`: return the lowest score for the specified exam
+    - `double attendanceRate()`: return the overall attendance rate
+    - `double attendanceRate(int classNumber)`: return the attendance rate for the specified session
+    - `double hwCompletionRate()`: return the overall homework completion rate
+    - `double hwCompletionRate(int hwNumber)`: return the homework completion rate for the specified assignment
+    - `void removeStudent(String student)`: remove all recorded data for the specified student
 
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
