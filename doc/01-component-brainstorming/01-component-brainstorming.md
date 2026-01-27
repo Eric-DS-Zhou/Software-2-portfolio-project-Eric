@@ -195,13 +195,25 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: `StudentGradeTracker`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to store and manage academic performance data for students, including homework grades, exam grades, and attendance records. The component allows instructors to compute summary statistics such as the mean and median of exam scores, as well as analyze overall attendance and homework completion patterns. By providing these analytical capabilities, the component helps instructors evaluate students’ understanding of course content and reflect on the effectiveness of their teaching methods. This allows instructors to improve their teaching practices and better support student success.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void recordTestGrade(String student, int testNumber, int grade)`: records an exam score for the specified student
+    - `void recordAttendance(String student, int classNumber, boolean attend)`: records whether the specified student attend the class or not
+    - `void recordHWcompletion(String student, int hwNumber, boolean complete)`:records whether the specified student complete the homework or not
+    - `int numberOfStudent()`: return the number of students recorded in the data
+    - `void clear()`: clean all the records
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `double meanExamScore`: return the mean
+    - `double medianExamScore`
+    - `int highestExamScore`
+    - `int lowestExamScore`
+    - `Map<String, Integer> examRankings(int examNumber)`
+    - `double attendRate`
+    - `double hwCompletionRate`
+    - `void removeStudent`
+
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
