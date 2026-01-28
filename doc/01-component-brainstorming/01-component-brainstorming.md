@@ -218,7 +218,7 @@ will likely refine your design to make your implementation easier to use.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      -Yes. The component is mutable because it is designed to record, update, and remove the student's academic performance data. The kernel method can modify the component. In addition, the secondary methods such as removeStudent can also change the stored data.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
       - <!-- TODO: provide an argument then delete this comment -->
