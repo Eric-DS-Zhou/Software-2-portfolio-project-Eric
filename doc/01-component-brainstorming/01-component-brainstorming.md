@@ -218,16 +218,16 @@ will likely refine your design to make your implementation easier to use.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      -Yes. The component is mutable because it is designed to record, update, and remove the student's academic performance data. The kernel method can modify the component. In addition, the secondary methods such as removeStudent can also change the stored data.
+      - Yes. The component is mutable because it is designed to record, update, and remove the student's academic performance data. The kernel method can modify the component. In addition, the secondary methods such as `removeStudent` can also change the stored data.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. The component will rely on `Map.Pair` to restore the data with the specified student.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Maybe not. Because the data such as examNumber or hwNumber will be given by the user.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. I think all the secondary methods can be implemented by using kernel methods. For example, `meanExamScore(int examNumber) can be implemented by using recordTestGrade, and then calculating the average across all students.
 
 - Component Design #2: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
