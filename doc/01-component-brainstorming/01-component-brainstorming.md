@@ -227,7 +227,7 @@ will likely refine your design to make your implementation easier to use.
       - Maybe not. Because the data such as examNumber or hwNumber will be given by the user.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes. I think all the secondary methods can be implemented by using kernel methods. For example, `meanExamScore(int examNumber) can be implemented by using recordTestGrade, and then calculating the average across all students.
+      - Yes. I think all the secondary methods can be implemented by using kernel methods. For example, `meanExamScore(int examNumber)` can be implemented by using `recordTestGrade`, and then calculating the average across all students.
 
 - Component Design #2: `Household Expense Tracker`
   - **Description**:
@@ -248,16 +248,16 @@ will likely refine your design to make your implementation easier to use.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because the methods will modify the internal state, such as recording new data, removing the specified data and clearing data. It will change the recorded data. Therefore, it will be mutable.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because I will use `Map.Pair` to store the expenses with the specified month and year.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, time-related values such as years and months are provided as integer parameters with contrained ranges.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. I think all the secondary methods can be implemented by kernel methods. For example, the `monthToMonthChange` can be implemented by call `monthlyExpense(year, month)` and `monthlyExpense(year, month - 1). Then, we can compute the difference between the two values.
 
 - Component Design #3: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
