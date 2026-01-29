@@ -195,7 +195,7 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: `StudentGradeTracker`
+- Component Design #1: `Student Grade Tracker`
   - **Description**:
     - The purpose of this component is to store and manage academic performance data for students, including homework grades, exam grades, and attendance records. The component allows instructors to compute summary statistics such as the mean and median of exam scores, as well as analyze overall attendance and homework completion patterns. By providing these analytical capabilities, the component helps instructors evaluate students’ understanding of course content and reflect on the effectiveness of their teaching methods. This allows instructors to improve their teaching practices and better support student success.
   - **Kernel Methods**:
@@ -229,13 +229,22 @@ will likely refine your design to make your implementation easier to use.
       Answer, explain, and give at least one example:
       - Yes. I think all the secondary methods can be implemented by using kernel methods. For example, `meanExamScore(int examNumber) can be implemented by using recordTestGrade, and then calculating the average across all students.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: `Household Expense Tracker`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to record and analyze household expenses. It allows user to store the expense records with the specific year, months, and categories. It can also compute yearly averages, monthly expense changes, and summaries.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void recordExpense(int year, int month, String category, double amount)`: records a household expense for the specified year, month and category
+    - `double monthlyExpense(int year, int month)`: return the total expense recorded for the specified month
+    - `double yearlyExpense(int year)`: return the total expense recoeded for the specified year
+    - `void clear()`: clear all the data
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `Map<Integer, double> monthlyExpenses(int year)`: return the total expense for each month in the specified year
+    - `double monthToMonthChange(int year, int month)`: return the change in total exppense from the previous month to the specified month
+    - `Map<String, double> monthToMonthCategoryChange(int year, int month)`: report the change in expense for each category from the previous month to the specified month
+    - `Map<String, double> monthlyCategoryBreakdown(int year, int month)`: return
+    - `Map<String, double> yearlyCategoryBreakdown(int year)`:
+    - `void removeMonth(int year, int month)`:
+    - `void removeExpense(int year, int month, String category)`:
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
