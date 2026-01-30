@@ -257,13 +257,15 @@ will likely refine your design to make your implementation easier to use.
       - No, time-related values such as years and months are provided as integer parameters with contrained ranges.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes. I think all the secondary methods can be implemented by kernel methods. For example, the `monthToMonthChange` can be implemented by call `monthlyExpense(year, month)` and `monthlyExpense(year, month - 1). Then, we can compute the difference between the two values.
+      - Yes. I think all the secondary methods can be implemented by kernel methods. For example, the `monthToMonthChange` can be implemented by call `monthlyExpense(year, month)` and `monthlyExpense(year, month - 1). Then, we can compute the difference between these two values.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: To-do List Tracker
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to record teaks and trach whether each task has been completed or not.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void recordTask(String name, boolean completed)`: records a task and initializes whether it has been completed
+    - `void updateStatus(String name, boolean completed)`: updates the completed status of the specified task
+    - `void clear()`: removes all the tasks
   - **Secondary Methods**:
     - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
@@ -362,7 +364,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
