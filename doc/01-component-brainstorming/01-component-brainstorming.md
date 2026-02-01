@@ -259,7 +259,7 @@ will likely refine your design to make your implementation easier to use.
       Answer, explain, and give at least one example:
       - Yes. I think all the secondary methods can be implemented by kernel methods. For example, the `monthToMonthChange` can be implemented by call `monthlyExpense(year, month)` and `monthlyExpense(year, month - 1). Then, we can compute the difference between these two values.
 
-- Component Design #3: To-do List Tracker
+- Component Design #3: `To-do List Tracker`
   - **Description**:
     - The purpose of this component is to record teaks and trach whether each task has been completed or not.
   - **Kernel Methods**:
@@ -278,16 +278,16 @@ will likely refine your design to make your implementation easier to use.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because the tasks can be added, removed and cleared. We can also modify whether the task has been completed.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, we may use `Map.Pair` to connect task names with their completion status.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, task names will be represented as strings and task status will be represented using boolean values.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, I think all the secondary methods can be implemented using the kernel methods. For example, the method `completedTaskCount()` can be implemented by reading all recorded tasks and counting how many tasks whose completion status is "true". In addition, the method  `remainingTaskCount` can be implemented by substracting the result of `completedTaskCount()` from the total number of recorded tasks.
 
 ## Post-Assignment
 
@@ -295,8 +295,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
