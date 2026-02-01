@@ -267,7 +267,14 @@ will likely refine your design to make your implementation easier to use.
     - `void updateStatus(String name, boolean completed)`: updates the completed status of the specified task
     - `void clear()`: removes all the tasks
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `double completionRate()`: returns the completion rate of all tasks
+    - `int totalTaskCount()`: returns the total number of recorded tasks
+    - `int completedTaskCount()`: returns the number of tasks marked as completed
+    - `int remainingTaskCount()`: returns the number of tasks not yet completed
+    - `boolean isTaskCompleted(String taskName)`: returns whether the specified task has been completed.
+    - `void removeTask(String taskName)`: removes the specified task from the records
+    - `Set<String> completedTasks()`: returns the set of task names that have been completed
+    - `Set<String> remainingTasks()`: returns the set of task names that are not completed
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
