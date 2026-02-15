@@ -201,9 +201,12 @@ will likely refine your design to make your implementation easier to use.
   - **Kernel Methods**:
     - `void recordTestGrade(String student, int testNumber, int grade)`: records an exam score for the specified student
     - `void recordAttendance(String student, int classNumber, boolean attend)`: records whether the specified student attend the class or not
-    - `void recordHWcompletion(String student, int hwNumber, boolean complete)`:records whether the specified student complete the homework or not
+    - `void recordHWcompletion(String student, int hwNumber, boolean complete)`: records whether the specified student complete the homework or not
+    - `int testGrade(String student, int testNumber)`: return the test grade of the specified student and test number
+    - `boolean attendance(String student, int classNumber)`:  return whether the specified student attended the specified class session
+    - `boolean hwCompletion(String student, int hwNumber)`: return whether the specified student completed the specified homework
+    - `Sequence<String> allStudents()`: return a sequence containing all students stored
     - `int numberOfStudent()`: return the number of students recorded in the data
-    - `void clear()`: clean all the records
   - **Secondary Methods**:
     - `double meanExamScore(int examNumber)`: return the mean score for the specified exam
     - `double medianExamScore(int examNumber)`: return the median score for the specified exam
@@ -236,7 +239,6 @@ will likely refine your design to make your implementation easier to use.
     - `void recordExpense(int year, int month, String category, double amount)`: records a household expense for the specified year, month and category
     - `double monthlyExpense(int year, int month)`: return the total expense recorded for the specified month
     - `double yearlyExpense(int year)`: return the total expense recoeded for the specified year
-    - `void clear()`: clear all the data
   - **Secondary Methods**:
     - `Map<Integer, double> monthlyExpenses(int year)`: return the total expense for each month in the specified year
     - `double monthToMonthChange(int year, int month)`: return the change in total exppense from the previous month to the specified month
@@ -265,7 +267,6 @@ will likely refine your design to make your implementation easier to use.
   - **Kernel Methods**:
     - `void recordTask(String name, boolean completed)`: records a task and initializes whether it has been completed
     - `void updateStatus(String name, boolean completed)`: updates the completed status of the specified task
-    - `void clear()`: removes all the tasks
   - **Secondary Methods**:
     - `double completionRate()`: returns the completion rate of all tasks
     - `int totalTaskCount()`: returns the total number of recorded tasks
