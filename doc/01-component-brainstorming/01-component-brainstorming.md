@@ -243,10 +243,10 @@ will likely refine your design to make your implementation easier to use.
     - `Map<Integer, double> monthlyExpenses(int year)`: return the total expense for each month in the specified year
     - `double monthToMonthChange(int year, int month)`: return the change in total exppense from the previous month to the specified month
     - `Map<String, double> monthToMonthCategoryChange(int year, int month)`: report the change in expense for each category from the previous month to the specified month
-    - `Map<String, double> monthlyCategoryBreakdown(int year, int month)`: return
-    - `Map<String, double> yearlyCategoryBreakdown(int year)`:
-    - `void removeMonth(int year, int month)`:
-    - `void removeExpense(int year, int month, String category)`:
+    - `Map<String, double> monthlyCategoryBreakdown(int year, int month)`: return the total expense for each category during the specified month
+    - `Map<String, double> yearlyCategoryBreakdown(int year)`: return the total expense for each category during the specified year
+    - `void removeMonth(int year, int month)`: remove all the data recorded for the specified month
+    - `void removeExpense(int year, int month, String category)`: remove the data for the speicified category during the spcified month
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -267,6 +267,8 @@ will likely refine your design to make your implementation easier to use.
   - **Kernel Methods**:
     - `void recordTask(String name, boolean completed)`: records a task and initializes whether it has been completed
     - `void updateStatus(String name, boolean completed)`: updates the completed status of the specified task
+    - `boolean taskStatus(String name)`: return whether the specified task is marked as completed
+    - `Sequence<String> tasks()`: return a sequence of all task names
   - **Secondary Methods**:
     - `double completionRate()`: returns the completion rate of all tasks
     - `int totalTaskCount()`: returns the total number of recorded tasks
