@@ -15,3 +15,10 @@ the following form: YYYY.0M.0D.
 - Designed a `To-do List Tracker` component
 
 [2026.02.03]: https://github.com/Eric-DS-Zhou/Software-2-portfolio-project-Eric/commits/v2026.02.03
+
+## [2026.02.15]
+
+### Changed
+
+- Modified `Student Grade Tracker` component
+- Modified `To-do List Tracker` componnent
