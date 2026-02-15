@@ -206,7 +206,7 @@ will likely refine your design to make your implementation easier to use.
     - `boolean attendance(String student, int classNumber)`:  return whether the specified student attended the specified class session
     - `boolean hwCompletion(String student, int hwNumber)`: return whether the specified student completed the specified homework
     - `int numberOfStudent()`: return the number of students recorded in the data
-    - `Sequence<String> allStudents`: return a sequence containing all students recorded in the data
+    - `Sequence<String> allStudents()`: return a sequence containing all students recorded in the data
   - **Secondary Methods**:
     - `double meanExamScore(int examNumber)`: return the mean score for the specified exam
     - `double medianExamScore(int examNumber)`: return the median score for the specified exam
@@ -260,22 +260,22 @@ will likely refine your design to make your implementation easier to use.
 
 - Component Design #3: `To-do List Tracker`
   - **Description**:
-    - The purpose of this component is to record teaks and trach whether each task has been completed or not.
+    - The purpose of this component is to record tesks and track whether each task has been completed or not.
   - **Kernel Methods**:
     - `void recordTask(String name, boolean completed)`: records a task and initializes whether it has been completed
     - `void updateStatus(String name, boolean completed)`: updates the completed status of the specified task
-    - `boolean taskStatus(String name)`: return whether the specified task is marked as completed
     - `void removeTask(String taskName)`: removes the specified task from the records
-    - `Sequence<String> tasks()`: return a sequence of all task names
+    - `boolean taskStatus(String name)`: returns whether the specified task is marked as completed
+    - `Sequence<String> tasks()`: returns a sequence of all task names
+    - `int totalTaskCount()`: returns the total number of recorded tasks
   - **Secondary Methods**:
     - `double completionRate()`: returns the completion rate of all tasks
-    - `int totalTaskCount()`: returns the total number of recorded tasks
     - `int completedTaskCount()`: returns the number of tasks marked as completed
     - `int remainingTaskCount()`: returns the number of tasks not yet completed
     - `boolean isTaskCompleted(String taskName)`: returns whether the specified task has been completed.
     - `Set<String> completedTasks()`: returns the set of task names that have been completed
     - `Set<String> remainingTasks()`: returns the set of task names that are not completed
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable 
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
       - Yes, because the tasks can be added, removed and cleared. We can also modify whether the task has been completed.
