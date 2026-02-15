@@ -275,7 +275,7 @@ will likely refine your design to make your implementation easier to use.
     - `boolean isTaskCompleted(String taskName)`: returns whether the specified task has been completed.
     - `Set<String> completedTasks()`: returns the set of task names that have been completed
     - `Set<String> remainingTasks()`: returns the set of task names that are not completed
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable 
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
       - Yes, because the tasks can be added, removed and cleared. We can also modify whether the task has been completed.
