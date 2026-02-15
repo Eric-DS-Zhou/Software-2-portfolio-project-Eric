@@ -115,8 +115,6 @@ Below is further rationale/explanation for the rubric items above:
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
 
-<!-- TODO: make a new branch from main then delete this comment -->
-
 ## Assignment Tasks
 
 As stated previously, your goal with this assignment is to produce a Java

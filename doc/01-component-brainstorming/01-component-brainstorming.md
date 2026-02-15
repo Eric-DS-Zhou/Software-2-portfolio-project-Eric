@@ -201,19 +201,19 @@ will likely refine your design to make your implementation easier to use.
   - **Kernel Methods**:
     - `void recordTestGrade(String student, int testNumber, int grade)`: records an exam score for the specified student
     - `void recordAttendance(String student, int classNumber, boolean attend)`: records whether the specified student attend the class or not
-    - `void recordHWcompletion(String student, int hwNumber, boolean complete)`:records whether the specified student complete the homework or not
+    - `void recordHWcompletion(String student, int hwNumber, boolean complete)`: records whether the specified student complete the homework or not
+    - `int examScore(String student, int testNumber)`: return the test grade of the specified student and test number
+    - `boolean attendance(String student, int classNumber)`:  return whether the specified student attended the specified class session
+    - `boolean hwCompletion(String student, int hwNumber)`: return whether the specified student completed the specified homework
     - `int numberOfStudent()`: return the number of students recorded in the data
-    - `void clear()`: clean all the records
+    - `Sequence<String> allStudents()`: return a sequence containing all students recorded in the data
   - **Secondary Methods**:
     - `double meanExamScore(int examNumber)`: return the mean score for the specified exam
     - `double medianExamScore(int examNumber)`: return the median score for the specified exam
     - `int highestExamScore(int examNumber)`: return the highest score for the specified exam
     - `int lowestExamScore(int examNumber)`: return the lowest score for the specified exam
-    - `double attendanceRate()`: return the overall attendance rate
     - `double attendanceRate(int classNumber)`: return the attendance rate for the specified session
-    - `double hwCompletionRate()`: return the overall homework completion rate
     - `double hwCompletionRate(int hwNumber)`: return the homework completion rate for the specified assignment
-    - `void removeStudent(String student)`: remove all recorded data for the specified student
 
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
@@ -236,15 +236,14 @@ will likely refine your design to make your implementation easier to use.
     - `void recordExpense(int year, int month, String category, double amount)`: records a household expense for the specified year, month and category
     - `double monthlyExpense(int year, int month)`: return the total expense recorded for the specified month
     - `double yearlyExpense(int year)`: return the total expense recoeded for the specified year
-    - `void clear()`: clear all the data
   - **Secondary Methods**:
     - `Map<Integer, double> monthlyExpenses(int year)`: return the total expense for each month in the specified year
     - `double monthToMonthChange(int year, int month)`: return the change in total exppense from the previous month to the specified month
     - `Map<String, double> monthToMonthCategoryChange(int year, int month)`: report the change in expense for each category from the previous month to the specified month
-    - `Map<String, double> monthlyCategoryBreakdown(int year, int month)`: return
-    - `Map<String, double> yearlyCategoryBreakdown(int year)`:
-    - `void removeMonth(int year, int month)`:
-    - `void removeExpense(int year, int month, String category)`:
+    - `Map<String, double> monthlyCategoryBreakdown(int year, int month)`: return the total expense for each category during the specified month
+    - `Map<String, double> yearlyCategoryBreakdown(int year)`: return the total expense for each category during the specified year
+    - `void removeMonth(int year, int month)`: remove all the data recorded for the specified month
+    - `void removeExpense(int year, int month, String category)`: remove the data for the speicified category during the spcified month
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -261,18 +260,19 @@ will likely refine your design to make your implementation easier to use.
 
 - Component Design #3: `To-do List Tracker`
   - **Description**:
-    - The purpose of this component is to record teaks and trach whether each task has been completed or not.
+    - The purpose of this component is to record tesks and track whether each task has been completed or not.
   - **Kernel Methods**:
     - `void recordTask(String name, boolean completed)`: records a task and initializes whether it has been completed
     - `void updateStatus(String name, boolean completed)`: updates the completed status of the specified task
-    - `void clear()`: removes all the tasks
+    - `void removeTask(String taskName)`: removes the specified task from the records
+    - `boolean taskStatus(String name)`: returns whether the specified task is marked as completed
+    - `Sequence<String> tasks()`: returns a sequence of all task names
+    - `int totalTaskCount()`: returns the total number of recorded tasks
   - **Secondary Methods**:
     - `double completionRate()`: returns the completion rate of all tasks
-    - `int totalTaskCount()`: returns the total number of recorded tasks
     - `int completedTaskCount()`: returns the number of tasks marked as completed
     - `int remainingTaskCount()`: returns the number of tasks not yet completed
     - `boolean isTaskCompleted(String taskName)`: returns whether the specified task has been completed.
-    - `void removeTask(String taskName)`: removes the specified task from the records
     - `Set<String> completedTasks()`: returns the set of task names that have been completed
     - `Set<String> remainingTasks()`: returns the set of task names that are not completed
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
