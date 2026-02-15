@@ -206,6 +206,9 @@ will likely refine your design to make your implementation easier to use.
     - `boolean attendance(String student, int classNumber)`:  return whether the specified student attended the specified class session
     - `boolean hwCompletion(String student, int hwNumber)`: return whether the specified student completed the specified homework
     - `Sequence<String> allStudents()`: return a sequence containing all students stored
+    - `Sequence<Integer> allClasses()`: return a sequence containing all ClassesNumber stored
+    - `Sequence<Integer> allHWs()`: return a sequence containing all HWnumber stored
+    - `void removeStudent(String student)`: remove all recorded data for the specified student
     - `int numberOfStudent()`: return the number of students recorded in the data
   - **Secondary Methods**:
     - `double meanExamScore(int examNumber)`: return the mean score for the specified exam
@@ -216,7 +219,6 @@ will likely refine your design to make your implementation easier to use.
     - `double attendanceRate(int classNumber)`: return the attendance rate for the specified session
     - `double hwCompletionRate()`: return the overall homework completion rate
     - `double hwCompletionRate(int hwNumber)`: return the homework completion rate for the specified assignment
-    - `void removeStudent(String student)`: remove all recorded data for the specified student
 
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
