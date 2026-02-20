@@ -106,6 +106,9 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
+`Conceptual Evaluation`
+I would like to choose the second option, `Household Expense Tracker`. This component is concrete and practical, so it is easy to identify what clients want and what they can do with it. Compared to the `Student Grade Tracker`, I think it would be more complex because it may require combining multiple `Map.Pair` and managing more structure than I can reliably implement right now. Compared to `To-do List Tracker`, the Expense Tracker feels more meaningful to demonstrate, since it supports richer operations such as adding expenses and computing useful summaries.
+
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
 > preference is to use GitHub Desktop. From there, you can click the `Branch`
