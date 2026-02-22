@@ -19,7 +19,7 @@ public class HouseholdExpenseTracker {
         
         @Override
         public String toString() {
-            return date + "|" + category + "| $" + amount + "|" + note;
+            return date + "|" + category + "|$" + amount + "|" + note;
         }
     }
 
