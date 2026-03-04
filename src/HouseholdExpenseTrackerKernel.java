@@ -1,3 +1,5 @@
+import java.util.List;
+
 import components.standard.Standard;
 /**
  * Kernel interface for {@code HouseholdExpenseTracker}.
@@ -33,6 +35,31 @@ public interface HouseholdExpenseTrackerKernel
      * @ensures remove = the removed record
      */
     HouseholdExpense remove(int index);
+
+    /**
+     * Returns the number of records in the tracker.
+     * @return the number of records
+     * @ensure size = number of records in this
+     */
+    int size();
+
+    /**
+     * Return the record at position {@code index} (without moving).
+     * @param index
+     *          the index of the specified record
+     * @return the record at {@code index}
+     * @requires 0 <= index < this.size
+     * @ensures entry = the record at {@code index} in this
+     */
+    HouseholdExpense entry(int index);
+
+    /**
+     * Return a copy of all records in this tracker.
+     * @return a list containing all records in this
+     * @ensures this = #this
+     */
+    List<HouseholdExpense> records();
+
 
 
 }
