@@ -23,7 +23,16 @@ public interface HouseholdExpenseTrackerKernel
      */
     void add(int yyyyMM, String category, double amount, String note);
 
-    public HouseholdExpense remove();
+    /**
+     * Removes and returns the record at postion {@code index}.
+     * @param index
+     *          the index of the specified record to remove
+     * @return the removed record
+     * @requires 0 <= index < this.size()
+     * @update this
+     * @ensures remove = the removed record
+     */
+    HouseholdExpense remove(int index);
 
 
 }
