@@ -7,6 +7,7 @@ public interface HouseholdExpenseTrackerKernel
 
     /**
      * Add a new expense record to the tracker.
+     *
      * @param yyyyMM
      *          the date in format yyyyMM (e.g 200603)
      * @param category
@@ -25,6 +26,7 @@ public interface HouseholdExpenseTrackerKernel
 
     /**
      * Removes and returns the record at position {@code index}.
+     *
      * @param index
      *          the index of the specified record to remove
      * @return the removed record
@@ -36,6 +38,7 @@ public interface HouseholdExpenseTrackerKernel
 
     /**
      * Returns the number of records in the tracker.
+     *
      * @return the number of records
      * @ensures size = number of records in this
      */
@@ -43,6 +46,7 @@ public interface HouseholdExpenseTrackerKernel
 
     /**
      * Return the record at position {@code index} (without moving).
+     *
      * @param index
      *          the index of the specified record
      * @return the record at {@code index}
