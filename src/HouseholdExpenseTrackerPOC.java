@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
-public class HouseholdExpenseTracker {
+/**
+ * Proof of concept.
+ */
+public class HouseholdExpenseTrackerPOC {
 
-    /**
-     * record the data
-     */
     private static class Expense {
         String date;
         String category;
@@ -16,10 +16,10 @@ public class HouseholdExpenseTracker {
             this.amount = amount;
             this.note = note;
         }
-        
+
         @Override
         public String toString() {
-            return date + "|" + category + "|$" + amount + "|" + note;
+            return this.date + "|" + this.category + "|$" + this.amount + "|" + this.note;
         }
     }
 
@@ -28,7 +28,7 @@ public class HouseholdExpenseTracker {
     /**
      * constructor
      */
-    public HouseholdExpenseTracker() {
+    public HouseholdExpenseTrackerPOC() {
         this.expenses = new ArrayList<>();
     }
 
@@ -116,7 +116,7 @@ public class HouseholdExpenseTracker {
 
     //main method (client view)
     public static void main(String[] args) {
-        HouseholdExpenseTracker tracker = new HouseholdExpenseTracker();
+        HouseholdExpenseTrackerPOC tracker = new HouseholdExpenseTrackerPOC();
 
         tracker.add("20260208", "Food", 12.50, "Chipotle");
         tracker.add("20260210", "Transport", 2.50, "Bus");
@@ -142,4 +142,4 @@ public class HouseholdExpenseTracker {
 
 }
 
-    
+
