@@ -4,7 +4,7 @@ import java.util.Map;
 /**
  * Enhanced interface for {@code HouseholdExpenseTracker}.
  */
-public interface HouseholdExpenseTracker1 extends HouseholdExpenseTrackerKernel {
+public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
 
     /**
      * Returns the total amount spent across all record in the tracker.

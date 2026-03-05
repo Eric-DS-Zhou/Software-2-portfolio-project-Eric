@@ -3,7 +3,7 @@ import components.standard.Standard;
  * Kernel interface for {@code HouseholdExpenseTracker}.
  */
 public interface HouseholdExpenseTrackerKernel
-            extends Standard<HouseholdExpenseTracker1>, Iterable<HouseholdExpense> {
+            extends Standard<HouseholdExpenseTracker>, Iterable<HouseholdExpense> {
 
     /**
      * Add a new expense record to the tracker.
