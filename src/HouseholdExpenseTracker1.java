@@ -4,7 +4,7 @@ import java.util.Map;
 /**
  * Enhanced interface for {@code HouseholdExpenseTracker}.
  */
-public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
+public interface HouseholdExpenseTracker1 extends HouseholdExpenseTrackerKernel {
 
     /**
      * Returns the total amount spent across all record in the tracker.
@@ -84,6 +84,8 @@ public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
      *         month
      * @requires yyyyMM >= 100000
      * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
+     * @ensures the map contains each categories for the specified month
+     *          in the tracker
      */
     Map<String, Double> monthlyCategoryBreakdown(int yyyyMM);
 
@@ -94,7 +96,47 @@ public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
      *          the specified year (e.g. 2026)
      * @return the map that contains total amount for each category in that
      *         year
+     * @requires year >=1
+     * @ensures the map contains each categories for the specified year in the
+     *          tracker
      */
     Map<String, Double> yearlyCategoryBreakdown(int yyyy);
+
+    /**
+     * Return the change in total spending from the previous month to the given
+     * month.
+     *
+     * @param yyyyMM
+     *            the specified month in format yyyyMM (e.g. 202603)
+     * @return monthlyTotal(yyyyMM) - monthlyTotal(yyyyMM - 1)
+     * @requires yyyyMM >= 100000
+     * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
+     * @ensures monthToMonthChanges = monthlyTotal(yyyyMM) - monthlyTotal(
+     *          yyyyMM - 1)
+     */
+    double monthToMonthChanges(int yyyyMM);
+
+    /**
+     * Return the change in total spending from the previous year to the given
+     * year.
+     * @param yyyy
+     *          the specified year (e.g. 2026)
+     * @return yearlyTotal(yyyy) - yearlyTotal(yyyy)
+     * @requires yyyy > 2
+     * @ensures yearToYearChange = yearlyTotal(yyyy) - yearlyTotal (yyyy - 1)
+     */
+    double yearToYearChanges(int yyyy);
+
+    /**
+     * Removes all expense records whose date equlas{@code yyyyMM}.
+     *
+     * @param yyyyMM
+     *            the specified month in format yyyyMM (e.g. 202603)
+     * @requires yyyyMM >= 100000
+     * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
+     * @ensures this = #this with all records e.date() != yyyyMM
+     * @updates this
+     */
+    void removeMonth(int yyyyMM);
 
 }
