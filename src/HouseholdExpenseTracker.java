@@ -134,9 +134,19 @@ public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
      *            the specified month in format yyyyMM (e.g. 202603)
      * @requires yyyyMM >= 100000
      * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
-     * @ensures this = #this with all records e.date() != yyyyMM
+     * @ensures this = #this with all records e.date() != {@code yyyyMM}
      * @updates this
      */
     void removeMonth(int yyyyMM);
+
+    /**
+     * Removes all expenses records in the specified category.
+     * @param category
+     *              the name of specified category
+     * @requires category is not empty
+     * @updates this
+     * @ensures this = #this with all records e.category() != {@code category}
+     */
+    void removeCategory(String category);
 
 }
