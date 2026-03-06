@@ -22,3 +22,16 @@ the following form: YYYY.0M.0D.
 
 - Modified `Student Grade Tracker` component
 - Modified `To-do List Tracker` componnent
+
+## [2026.02.21]
+
+### Added
+
+- Designed a proof of concept for `HouseholdExpenseTracker` component
+
+## [2026.03.05]
+
+### Added
+
+- Designed kernel and enhanced interfaces for `Household Expense Tracker` component
+- Added `HouseholdExpense (Java record)` to store expense fields (`date, category, amount, note`).
