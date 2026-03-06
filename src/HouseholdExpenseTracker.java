@@ -10,7 +10,7 @@ public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
      * Returns the total amount spent across all record in the tracker.
      *
      * @return total amount spent
-     * @ensure totalSpent = sum of expense.amount()
+     * @ensures totalSpent = sum of expense.amount()
      */
     double totalSpent();
 
@@ -96,7 +96,7 @@ public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
      *          the specified year (e.g. 2026)
      * @return the map that contains total amount for each category in that
      *         year
-     * @requires year >=1
+     * @requires yyyy >=1
      * @ensures the map contains each categories for the specified year in the
      *          tracker
      */
@@ -114,18 +114,18 @@ public interface HouseholdExpenseTracker extends HouseholdExpenseTrackerKernel {
      * @ensures monthToMonthChanges = monthlyTotal(yyyyMM) - monthlyTotal(
      *          yyyyMM - 1)
      */
-    double monthToMonthChanges(int yyyyMM);
+    double monthToMonthChange(int yyyyMM);
 
     /**
      * Return the change in total spending from the previous year to the given
      * year.
      * @param yyyy
      *          the specified year (e.g. 2026)
-     * @return yearlyTotal(yyyy) - yearlyTotal(yyyy)
-     * @requires yyyy > 2
+     * @return yearlyTotal(yyyy) - yearlyTotal(yyyy - 1)
+     * @requires yyyy >= 2
      * @ensures yearToYearChange = yearlyTotal(yyyy) - yearlyTotal (yyyy - 1)
      */
-    double yearToYearChanges(int yyyy);
+    double yearToYearChange(int yyyy);
 
     /**
      * Removes all expense records whose date equlas{@code yyyyMM}.
