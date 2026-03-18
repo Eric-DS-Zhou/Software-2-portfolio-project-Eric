@@ -22,3 +22,9 @@ the following form: YYYY.0M.0D.
 
 - Modified `Student Grade Tracker` component
 - Modified `To-do List Tracker` componnent
+
+## [2026.02.21]
+
+### Added
+
+- Designed a proof of concept for `HouseholdExpenseTracker` component
