@@ -41,7 +41,7 @@ the following form: YYYY.0M.0D.
 ### Added
 
 - Designed abstract class for `HouseholdExpenseTracker` component
-- Implemented all secondary methods in `HouseholdExpense`
+- Implemented all secondary methods in `HouseholdExpenseTracker`
 - Implemented toString(), equals(), hashCode()
 
 ### Changed
@@ -49,3 +49,4 @@ the following form: YYYY.0M.0D.
 - Updated the year precondition from `yyyy >= 1` to `yyyy >= 1000` so the component better reflects realistic calendar years.
 - Changed the year-to-year boundary to yyyy >= 1001
 - Changed the month-to-month boundary to yyyyMM >= 100101
+- Updated the `HouseholdExpenseTracker` to align preconditions and method contracts with `HouseholdExpenseTrackerSecondary`
