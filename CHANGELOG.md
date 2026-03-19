@@ -35,3 +35,13 @@ the following form: YYYY.0M.0D.
 
 - Designed kernel and enhanced interfaces for `Household Expense Tracker` component
 - Added `HouseholdExpense (Java record)` to store expense fields (`date, category, amount, note`).
+
+## [2026.03.18]
+
+### Added
+
+- Designed abstract class for `HouseholdExpenseTracker` component
+
+### Changed
+
+- Updated the year precondition from `yyyy >= 1` to `yyyy >= 1000` so the component better reflects realistic calendar years.

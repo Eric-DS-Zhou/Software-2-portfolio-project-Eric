@@ -11,7 +11,7 @@ public abstract class HouseholdExpenseTrackerSecondary
     /**
      * avoid checkstyle for magic number.
      */
-    private static final int TWELVE = 12, HUNDRED = 100, THOUSAND = 1000,
+    private static final int TWELVE = 12, HUNDRED = 100, THREEONE = 31, THOUSAND = 1000,
                                 HUNDREDTHOUSAND = 100000;
 
     /**
@@ -34,6 +34,7 @@ public abstract class HouseholdExpenseTrackerSecondary
 
     /**
      * Add amount to the category in map.
+     *
      * @param map
      *          the aim map
      * @param category
@@ -52,6 +53,32 @@ public abstract class HouseholdExpenseTrackerSecondary
             map.put(category, amount);
         }
 
+    }
+
+    /**
+     * Return the previous month of {@code yyyyMM}.
+     *
+     * @param yyyyMM
+     *          the specified month
+     * @return
+     *          the previous month of the specified month
+     * @requires yyyyMM >= 100000
+     * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
+     *
+     */
+    private static int previousMonth(int yyyyMM) {
+        assert isValidYearMonth(yyyyMM) : "Violation of: yyyyMM is valid";
+        int year = yyyyMM / HUNDRED;
+        int month = yyyyMM % HUNDRED;
+        int result = 0;
+
+        if (month == 1) {
+            result = (year - 1) * HUNDRED + TWELVE;
+        } else {
+            result = year * HUNDRED + (month - 1);
+        }
+
+        return result;
     }
 
     @Override
@@ -173,6 +200,111 @@ public abstract class HouseholdExpenseTrackerSecondary
             if (e.date() / HUNDRED == yyyy) {
                 addToCategory(result, e.category(), e.amount());
             }
+        }
+
+        return result;
+    }
+
+    @Override
+    public final double monthToMonthChange(int yyyyMM) {
+        assert isValidYearMonth(yyyyMM) : "Violation of: yyyyMM is valid";
+
+        double result = 0;
+        int previous = previousMonth(yyyyMM);
+
+        result = this.monthlyTotal(yyyyMM) - this.monthlyTotal(previous);
+
+        return result;
+    }
+
+    @Override
+    public final double yearToYearChange(int yyyy) {
+        assert yyyy >= THOUSAND : "Violation of: yyyy >= 1000";
+
+        double result = 0;
+
+        result = this.yearlyTotal(yyyy) - this.yearlyTotal(yyyy - 1);
+
+        return result;
+    }
+
+    @Override
+    public final void removeMonth(int yyyyMM) {
+        assert isValidYearMonth(yyyyMM) : "Violation of: yyyyMM is valid";
+
+        for (int i = this.size() - 1; i >= 0; i--) {
+            HouseholdExpense e = this.entry(i);
+            if (e.date() == yyyyMM) {
+                this.remove(i);
+            }
+        }
+    }
+
+    @Override
+    public final void removeCategory(String category) {
+        assert category.length() > 0 : "Violation of: category is not empty";
+
+        for (int i = this.size() - 1; i >= 0; i--) {
+            HouseholdExpense e = this.entry(i);
+            if (e.category().equals(category)) {
+                this.remove(i);
+            }
+        }
+    }
+
+    @Override
+    public final String toString() {
+        StringBuilder result = new StringBuilder();
+
+        result.append("<");
+
+        for (int i = 0; i < this.size(); i++) {
+            if (i > 0) {
+                result.append(",");
+            }
+            result.append(this.entry(i));
+        }
+
+        result.append(">");
+
+        return result.toString();
+    }
+
+    @Override
+    public final boolean equals(Object obj) {
+        boolean result = false;
+
+        if (obj instanceof HouseholdExpenseTracker) {
+            HouseholdExpenseTracker other = (HouseholdExpenseTracker) obj;
+            boolean same = false;
+
+            if (this.size() == other.size()) {
+                same = true;
+            }
+
+            if (same) {
+                for (int i =  0; i < this.size(); i++) {
+                    HouseholdExpense thisEntry = this.entry(i);
+                    HouseholdExpense otherEntry = other.entry(i);
+                    if (!thisEntry.equals(otherEntry)) {
+                        same = false;
+                    }
+                }
+            }
+
+            result = same;
+        }
+
+        return result;
+    }
+
+    @Override
+    public final int hashCode() {
+        int result = 1;
+
+        for (int i = 0; i < this.size(); i++) {
+            HouseholdExpense e = this.entry(i);
+            result = THREEONE * result + e.hashCode();
         }
 
         return result;
