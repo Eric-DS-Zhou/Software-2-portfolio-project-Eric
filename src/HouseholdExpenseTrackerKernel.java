@@ -16,7 +16,7 @@ public interface HouseholdExpenseTrackerKernel
      *          the amount of expense ($, e.g. 12.26)
      * @param note
      *          additioinal note (e.g. Starbucks)
-     * @requires yyyyMM >= 100000
+     * @requires yyyyMM >= 100101
      * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
      * @requires category is not empty
      * @requires amount >= 0

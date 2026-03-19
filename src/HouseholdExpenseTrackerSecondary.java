@@ -11,15 +11,16 @@ public abstract class HouseholdExpenseTrackerSecondary
     /**
      * avoid checkstyle for magic number.
      */
-    private static final int TWELVE = 12, HUNDRED = 100, THREEONE = 31, THOUSAND = 1000,
-                                HUNDREDTHOUSAND = 100000;
+    private static final int TWELVE = 12, HUNDRED = 100, THREEONE = 31,
+                        MIN_YEARMONTH_PERVIOUS = 100101, THOUSANDONE = 1001,
+                         THOUSAND = 1000, HUNDREDTHOUSAND = 100000;
 
     /**
      * Report whether {@code yyyyMM} is a valid yearMonth.
      *
      * @param yyyyMM
      *            the year and month
-     * @return turn iff {@code yyyyMM} is valid
+     * @return true iff {@code yyyyMM} is valid
      */
     private static boolean isValidYearMonth(int yyyyMM) {
         boolean result = false;
@@ -62,11 +63,12 @@ public abstract class HouseholdExpenseTrackerSecondary
      *          the specified month
      * @return
      *          the previous month of the specified month
-     * @requires yyyyMM >= 100000
+     * @requires yyyyMM >= 100101
      * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
      *
      */
     private static int previousMonth(int yyyyMM) {
+        assert yyyyMM >= MIN_YEARMONTH_PERVIOUS : "Violation of: yyyyMM >= 100101";
         assert isValidYearMonth(yyyyMM) : "Violation of: yyyyMM is valid";
         int year = yyyyMM / HUNDRED;
         int month = yyyyMM % HUNDRED;
@@ -207,6 +209,7 @@ public abstract class HouseholdExpenseTrackerSecondary
 
     @Override
     public final double monthToMonthChange(int yyyyMM) {
+        assert yyyyMM >= MIN_YEARMONTH_PERVIOUS : "Violation of: yyyyMM >= 100101";
         assert isValidYearMonth(yyyyMM) : "Violation of: yyyyMM is valid";
 
         double result = 0;
@@ -219,7 +222,7 @@ public abstract class HouseholdExpenseTrackerSecondary
 
     @Override
     public final double yearToYearChange(int yyyy) {
-        assert yyyy >= THOUSAND : "Violation of: yyyy >= 1000";
+        assert yyyy >= THOUSANDONE : "Violation of: yyyy >= 1001";
 
         double result = 0;
 
@@ -260,7 +263,7 @@ public abstract class HouseholdExpenseTrackerSecondary
 
         for (int i = 0; i < this.size(); i++) {
             if (i > 0) {
-                result.append(",");
+                result.append(", ");
             }
             result.append(this.entry(i));
         }
