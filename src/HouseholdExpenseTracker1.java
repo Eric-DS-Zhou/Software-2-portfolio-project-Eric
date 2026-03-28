@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * {@Code HouseholdExpenseTracker} represented as an {@code ArrayList}
- * of {@code HouseholdExepnse} records.
+ * {@code HouseholdExpenseTracker} represented as an {@code ArrayList}
+ * of {@code HouseholdExpense} records.
  *
  * @convention $this.rep /= null and
  *              [every element in $this.rep is a valid HouseholdExpense record]
@@ -18,10 +18,10 @@ public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecon
     /**
      * Magic numbers.
      */
-    private static final int TWELVE = 12, HUNDRED = 100, MIN_YEARMONTH_PERVIOUS = 100101;
+    private static final int TWELVE = 12, HUNDRED = 100, MIN_YEARMONTH_PREVIOUS = 100101;
 
     /**
-     * Representation of this {@Code HouseholdExpenseTracker}.
+     * Representation of this {@code HouseholdExpenseTracker}.
      */
     private ArrayList<HouseholdExpense> rep;
 
@@ -72,11 +72,11 @@ public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecon
 
     @Override
     public void add(int yyyyMM, String category, double amount, String note) {
-        assert yyyyMM >= MIN_YEARMONTH_PERVIOUS : "Violation of: yyyyMM >= 100101";
+        assert yyyyMM >= MIN_YEARMONTH_PREVIOUS : "Violation of: yyyyMM >= 100101";
         assert (yyyyMM % HUNDRED) >= 1 && (yyyyMM % HUNDRED) <= TWELVE
                                             : "Violation of: month is between 1 and 12";
         assert category.length() > 0 : "Violation of: category is not empty";
-        assert amount >= 0 : "Vialation of: amount >= 0";
+        assert amount >= 0 : "Violation of: amount >= 0";
 
         HouseholdExpense entry = new HouseholdExpense(yyyyMM, category, amount, note);
         this.rep.add(entry);
