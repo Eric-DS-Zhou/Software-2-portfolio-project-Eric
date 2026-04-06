@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Eric Zhou
+- **Dot Number**: zhou.4898
+- **Due Date**: Apr 24 @ 11:59 PM EST
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -140,8 +138,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,12 +303,12 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think the portfolio project helped me develop a much better understanding of software development. It also felt more interesting than I originally expected. One part I especially enjoyed was being able to turn my own ideas into something real. I found that process both meaningful and fun, because it made software development feel creative rather than just technical.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+One of the first challenges I ran into was figuring out how to distinguish between kernel methods and secondary methods. Because of that, I revised my design several times during the brainstorming and interface stages. This was also the first time I had written an interface on my own, so it was challenging for me to recognize all of the constraints I needed to consider. To address this, I looked through both the Java API and the OSU component interfaces to better understand how interfaces are structured, and I used those examples to guide my own design.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
@@ -384,8 +380,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
 request of all your changes. Pull requests are pretty easy to make if you're
@@ -435,7 +429,5 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
