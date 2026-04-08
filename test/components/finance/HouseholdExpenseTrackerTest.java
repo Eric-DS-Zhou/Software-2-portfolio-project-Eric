@@ -1,15 +1,17 @@
+package components.finance;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-
 /**
  * Junit tests for secondary methods of {@code HouseholdExpenseTracker}.
-*/
+ */
 public class HouseholdExpenseTrackerTest {
 
     /**
      * Create a new empty tracker.
+     *
      * @return the new empty tracker
      */
     private HouseholdExpenseTracker constructorTest() {
@@ -18,6 +20,7 @@ public class HouseholdExpenseTrackerTest {
 
     /**
      * Create a tracker with some given records.
+     *
      * @return tracker containing those sample records
      */
     private HouseholdExpenseTracker createSampleTracker() {

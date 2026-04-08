@@ -1,5 +1,8 @@
+package components.finance;
+
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Proof of concept.
  */
@@ -10,7 +13,8 @@ public class HouseholdExpenseTrackerPOC {
         String category;
         double amount;
         String note;
-        Expense(String date, String category, double amount, String note){
+
+        Expense(String date, String category, double amount, String note) {
             this.date = date;
             this.category = category;
             this.amount = amount;
@@ -19,7 +23,8 @@ public class HouseholdExpenseTrackerPOC {
 
         @Override
         public String toString() {
-            return this.date + "|" + this.category + "|$" + this.amount + "|" + this.note;
+            return this.date + "|" + this.category + "|$" + this.amount + "|"
+                    + this.note;
         }
     }
 
@@ -34,6 +39,7 @@ public class HouseholdExpenseTrackerPOC {
 
     /**
      * add a new expense.
+     *
      * @param date
      * @param category
      * @param amount
@@ -46,6 +52,7 @@ public class HouseholdExpenseTrackerPOC {
 
     /**
      * remove an expense by index.
+     *
      * @param index
      * @return
      */
@@ -60,6 +67,7 @@ public class HouseholdExpenseTrackerPOC {
 
     /**
      * total spent for all expenses.
+     *
      * @return
      */
     public double totalSpent() {
@@ -72,6 +80,7 @@ public class HouseholdExpenseTrackerPOC {
 
     /**
      * Total spent for one category
+     *
      * @param category
      * @return
      */
@@ -90,13 +99,14 @@ public class HouseholdExpenseTrackerPOC {
 
     /**
      * return a list of expenses in the specifed month
+     *
      * @param yyyyMm
      * @return
      */
     public List<String> expensesInMonth(String yyyyMm) {
         List<String> result = new ArrayList<>();
         for (Expense e : this.expenses) {
-            if(e.date.substring(0,6).equals(yyyyMm)){
+            if (e.date.substring(0, 6).equals(yyyyMm)) {
                 result.add(e.toString());
             }
         }
@@ -108,7 +118,7 @@ public class HouseholdExpenseTrackerPOC {
      */
     public void printAll() {
         System.out.println("-----Expenses (" + this.expenses.size() + ")-----");
-        for(int i = 0; i < this.expenses.size(); i++){
+        for (int i = 0; i < this.expenses.size(); i++) {
             System.out.println("[" + i + "]" + this.expenses.get(i));
         }
         System.out.println("---------------------");
@@ -121,25 +131,25 @@ public class HouseholdExpenseTrackerPOC {
         tracker.add("20260208", "Food", 12.50, "Chipotle");
         tracker.add("20260210", "Transport", 2.50, "Bus");
         tracker.add("20260218", "Food", 5.00, "Breakfast");
-        tracker.add("20260228", "Electricity", 50.75, "Electricity Fee for 202601");
+        tracker.add("20260228", "Electricity", 50.75,
+                "Electricity Fee for 202601");
 
         tracker.printAll();
 
         System.out.println("Total spent: $" + tracker.totalSpent());
-        System.out.println("Total spent on Food: $" + tracker.totalForCategory("Food"));
+        System.out.println(
+                "Total spent on Food: $" + tracker.totalForCategory("Food"));
         System.out.println("Remove index 1");
         tracker.remove(1);
         tracker.printAll();
         System.out.println("Total spent after remove");
-        System.out.println("Total spent(after remove): $" + tracker.totalSpent());
+        System.out
+                .println("Total spent(after remove): $" + tracker.totalSpent());
         System.out.println("Expenses in 202602");
-        for (String s : tracker.expensesInMonth("202602")){
+        for (String s : tracker.expensesInMonth("202602")) {
             System.out.println(s);
         }
 
     }
 
-
 }
-
-

@@ -1,24 +1,29 @@
+package components.finance;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * {@code HouseholdExpenseTracker} represented as an {@code ArrayList}
- * of {@code HouseholdExpense} records.
+ * {@code HouseholdExpenseTracker} represented as an {@code ArrayList} of
+ * {@code HouseholdExpense} records.
  *
- * @convention $this.rep /= null and
- *              [every element in $this.rep is a valid HouseholdExpense record]
+ * @convention $this.rep /= null and [every element in $this.rep is a valid
+ *             HouseholdExpense record]
  * @correspondence this = sequence of expense records in $this.rep
  */
-public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecondary {
+public final class HouseholdExpenseTracker1
+        extends HouseholdExpenseTrackerSecondary {
 
     /**
-     * Private members ----------------------------------------------------------------
+     * Private members
+     * ----------------------------------------------------------------
      */
 
     /**
      * Magic numbers.
      */
-    private static final int TWELVE = 12, HUNDRED = 100, MIN_YEARMONTH_PREVIOUS = 100101;
+    private static final int TWELVE = 12, HUNDRED = 100,
+            MIN_YEARMONTH_PREVIOUS = 100101;
 
     /**
      * Representation of this {@code HouseholdExpenseTracker}.
@@ -33,7 +38,8 @@ public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecon
     }
 
     /**
-     * Constructor --------------------------------------------------------------------
+     * Constructor
+     * --------------------------------------------------------------------
      */
 
     /**
@@ -44,7 +50,8 @@ public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecon
     }
 
     /**
-     * Standard methods ---------------------------------------------------------------.
+     * Standard methods
+     * ---------------------------------------------------------------.
      */
 
     @Override
@@ -63,8 +70,7 @@ public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecon
     public void transferFrom(HouseholdExpenseTracker source) {
         assert source != null : "Violation of: source is not null";
         assert source != this : "Violation of: source is not this";
-        assert source instanceof HouseholdExpenseTracker1
-                            : "Violation of: source is of type HouseholdExpenseTracker1";
+        assert source instanceof HouseholdExpenseTracker1 : "Violation of: source is of type HouseholdExpenseTracker1";
         HouseholdExpenseTracker1 localSource = (HouseholdExpenseTracker1) source;
         this.rep = localSource.rep;
         localSource.createNewRep();
@@ -73,12 +79,13 @@ public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecon
     @Override
     public void add(int yyyyMM, String category, double amount, String note) {
         assert yyyyMM >= MIN_YEARMONTH_PREVIOUS : "Violation of: yyyyMM >= 100101";
-        assert (yyyyMM % HUNDRED) >= 1 && (yyyyMM % HUNDRED) <= TWELVE
-                                            : "Violation of: month is between 1 and 12";
+        assert (yyyyMM % HUNDRED) >= 1 && (yyyyMM
+                % HUNDRED) <= TWELVE : "Violation of: month is between 1 and 12";
         assert category.length() > 0 : "Violation of: category is not empty";
         assert amount >= 0 : "Violation of: amount >= 0";
 
-        HouseholdExpense entry = new HouseholdExpense(yyyyMM, category, amount, note);
+        HouseholdExpense entry = new HouseholdExpense(yyyyMM, category, amount,
+                note);
         this.rep.add(entry);
 
     }
@@ -116,6 +123,5 @@ public final class HouseholdExpenseTracker1 extends HouseholdExpenseTrackerSecon
 
         return result;
     }
-
 
 }
