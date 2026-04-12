@@ -56,3 +56,11 @@ the following form: YYYY.0M.0D.
 ### Added
 
 - Designed kernel implementation for `HouseholdExpenseTracker` component
+
+## [2026.04.11]
+
+### Added
+
+- Designed test suite for `HouseholdExpenseTracker` component
+- Designed two different use cases for `HouseholdExpenseTracker` component
+- Finished the reflection questions for `Portfolio Project - Final touch`

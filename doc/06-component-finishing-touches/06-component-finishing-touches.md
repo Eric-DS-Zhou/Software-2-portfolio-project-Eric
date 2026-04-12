@@ -314,7 +314,7 @@ One of the first challenges I ran into was figuring out how to distinguish betwe
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I think I still enjoy software development. I think it is interesting to turn my own ideas into something real and useful. However, this project also made me realize that testing can be very tedious. If I had even more methods, writing all the tests would probably be even more painful. Even so, I still find software development meaningful and interesting.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -322,29 +322,32 @@ One of the first challenges I ran into was figuring out how to distinguish betwe
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I learned a lot of new skills through this process. For example, this was my first time learning about Java records, and they made my work much easier. At first, I planned to use many maps to store the data, but using records helped simplify the design. At the same time, this project also strengthened my ability to write interfaces. It's my first time to write the overall interfaced by myself. I had to think carefully about all the constraints and method responsibilities, which I found very interesting. In addition, I chose to use Java data structures instead of OSU components, so reading Java’s own interfaces and learning how to use them also helped me understand Java better. I also learned how to use Git and GitHub to track my work over time, and I learned how to write a changelog to document the progress of the project.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Applied Java records to simplify data representation and reduce complexity
+- Designed the overall interfaces by considering method boundaries, constraints, and overall component structure
+- Evaluated and refined the software design throughtout the development process
+- Used Git and GitHub to track changes and manage project progress
+- Implemented a custom Java expense-tracking component with data recording and analysis features
+- Developed stronger understanding of java interfaces and data stuctures.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+Working on this project made me realize that this kind of software design is actually very interesting to me. Even though my component focused on finance, I think the general idea behind it could be applied in many different areas. With changes to the categories and keywords, a similar design could also be used in business, learning, or education. That made me feel that the project was not just about one narrow topic, but about building something flexible that could be adapted to other real situations.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I could continue on this path by building more small projects. I also want to keep using GitHub and changelogs to track my work more clearly. In addition, I can look for more projects on GitHub to practice. For mentors, I will continue using Discord to ask classmates for help, since many of them are very experienced. I am also very grateful to Professor Grifski. He introduced me to the idea of using Java records, which helped simplify my design, and he also helped me solve many problems throughout this project. His guidance has been very valuable to me. He is the best professor I have ever met. <3
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
