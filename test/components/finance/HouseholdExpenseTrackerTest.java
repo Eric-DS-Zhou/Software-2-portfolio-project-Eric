@@ -301,7 +301,7 @@ public class HouseholdExpenseTrackerTest {
     }
 
     @Test
-    public void testEqualsSameState() {
+    public void testEqualsTrue() {
         HouseholdExpenseTracker t1 = this.createSampleTracker();
         HouseholdExpenseTracker t2 = this.createSampleTracker();
 
@@ -310,7 +310,7 @@ public class HouseholdExpenseTrackerTest {
     }
 
     @Test
-    public void testEqualsDifferentState() {
+    public void testEqualsFalse() {
         HouseholdExpenseTracker t1 = this.createSampleTracker();
         HouseholdExpenseTracker t2 = this.createSampleTracker();
 
@@ -321,7 +321,7 @@ public class HouseholdExpenseTrackerTest {
     }
 
     @Test
-    public void testHashCodeSameState() {
+    public void testHashCodeTrue() {
         HouseholdExpenseTracker t1 = this.createSampleTracker();
         HouseholdExpenseTracker t2 = this.createSampleTracker();
 
@@ -329,7 +329,7 @@ public class HouseholdExpenseTrackerTest {
     }
 
     @Test
-    public void testHashCodeDifferentState() {
+    public void testHashCodeFalse() {
         HouseholdExpenseTracker t1 = this.createSampleTracker();
         HouseholdExpenseTracker t2 = this.createSampleTracker();
         t2.remove(0);
