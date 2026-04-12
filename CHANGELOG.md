@@ -28,3 +28,10 @@ the following form: YYYY.0M.0D.
 ### Added
 
 - Designed a proof of concept for `HouseholdExpenseTracker` component
+
+## [2026.03.05]
+
+### Added
+
+- Designed kernel and enhanced interfaces for `Household Expense Tracker` component
+- Added `HouseholdExpense (Java record)` to store expense fields (`date, category, amount, note`).
