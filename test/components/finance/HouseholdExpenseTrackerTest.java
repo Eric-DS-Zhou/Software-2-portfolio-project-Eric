@@ -295,8 +295,9 @@ public class HouseholdExpenseTrackerTest {
 
         assertEquals(
                 "<HouseholdExpense[date=202601, category=food, amount=10.0, "
-                        + "note=breakfast], HouseholdExpense[date=202602, category=rent, "
-                        + "amount=1000.0, note=monthlyRent]>",
+                        + "note=breakfast],\n"
+                        + "HouseholdExpense[date=202602, category=rent, amount=1000.0, "
+                        + "note=monthlyRent]>",
                 t.toString());
     }
 

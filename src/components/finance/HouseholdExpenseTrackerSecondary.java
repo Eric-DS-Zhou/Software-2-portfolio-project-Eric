@@ -265,7 +265,7 @@ public abstract class HouseholdExpenseTrackerSecondary
 
         for (int i = 0; i < this.size(); i++) {
             if (i > 0) {
-                result.append(", ");
+                result.append(",\n");
             }
             result.append(this.entry(i));
         }

@@ -64,3 +64,7 @@ the following form: YYYY.0M.0D.
 - Designed test suite for `HouseholdExpenseTracker` component
 - Designed two different use cases for `HouseholdExpenseTracker` component
 - Finished the reflection questions for `Portfolio Project - Final touch`
+
+### Changed
+
+- Updated `toString` so expense records are displayed on separate lines for better readability
