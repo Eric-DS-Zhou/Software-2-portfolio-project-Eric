@@ -50,3 +50,9 @@ the following form: YYYY.0M.0D.
 - Changed the year-to-year boundary to yyyy >= 1001
 - Changed the month-to-month boundary to yyyyMM >= 100101
 - Updated the `HouseholdExpenseTracker` to align preconditions and method contracts with `HouseholdExpenseTrackerSecondary`
+
+## [2026.03.28]
+
+### Added
+
+- Designed kernel implementation for `HouseholdExpenseTracker` component
