@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Eric Zhou
+- **Dot Number**: zhou.4898
+- **Due Date**: Apr 24 @ 11:59 PM EST
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -140,8 +138,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,18 +303,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think the portfolio project helped me develop a much better understanding of software development. It also felt more interesting than I originally expected. One part I especially enjoyed was being able to turn my own ideas into something real. I found that process both meaningful and fun, because it made software development feel creative rather than just technical.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+One of the first challenges I ran into was figuring out how to distinguish between kernel methods and secondary methods. Because of that, I revised my design several times during the brainstorming and interface stages. This was also the first time I had written an interface on my own, so it was challenging for me to recognize all of the constraints I needed to consider. To address this, I looked through both the Java API and the OSU component interfaces to better understand how interfaces are structured, and I used those examples to guide my own design.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I think I still enjoy software development. I think it is interesting to turn my own ideas into something real and useful. However, this project also made me realize that testing can be very tedious. If I had even more methods, writing all the tests would probably be even more painful. Even so, I still find software development meaningful and interesting.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +322,32 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I learned a lot of new skills through this process. For example, this was my first time learning about Java records, and they made my work much easier. At first, I planned to use many maps to store the data, but using records helped simplify the design. At the same time, this project also strengthened my ability to write interfaces. It's my first time to write the overall interfaced by myself. I had to think carefully about all the constraints and method responsibilities, which I found very interesting. In addition, I chose to use Java data structures instead of OSU components, so reading Java’s own interfaces and learning how to use them also helped me understand Java better. I also learned how to use Git and GitHub to track my work over time, and I learned how to write a changelog to document the progress of the project.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Applied Java records to simplify data representation and reduce complexity
+- Designed the overall interfaces by considering method boundaries, constraints, and overall component structure
+- Evaluated and refined the software design throughtout the development process
+- Used Git and GitHub to track changes and manage project progress
+- Implemented a custom Java expense-tracking component with data recording and analysis features
+- Developed stronger understanding of java interfaces and data stuctures.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+Working on this project made me realize that this kind of software design is actually very interesting to me. Even though my component focused on finance, I think the general idea behind it could be applied in many different areas. With changes to the categories and keywords, a similar design could also be used in business, learning, or education. That made me feel that the project was not just about one narrow topic, but about building something flexible that could be adapted to other real situations.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I could continue on this path by building more small projects. I also want to keep using GitHub and changelogs to track my work more clearly. In addition, I can look for more projects on GitHub to practice. For mentors, I will continue using Discord to ask classmates for help, since many of them are very experienced. I am also very grateful to Professor Grifski. He introduced me to the idea of using Java records, which helped simplify my design, and he also helped me solve many problems throughout this project. His guidance has been very valuable to me. He is the best professor I have ever met. <3
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -383,8 +382,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -435,7 +432,5 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9

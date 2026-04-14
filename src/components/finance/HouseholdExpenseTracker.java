@@ -1,3 +1,5 @@
+package components.finance;
+
 import java.util.List;
 import java.util.Map;
 
