@@ -32,7 +32,6 @@ public final class InteractiveDemo {
         int choice = 0;
 
         while (choice != FIVE) {
-            System.out.println();
             System.out.println("Expense Tracker Menu");
             System.out.println("1. Add an expense");
             System.out.println("2. Remove an expense");
