@@ -1,19 +1,22 @@
+package components.finance;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Layered implementations of secondary methods for {@code HouseholdExpenseTracker}.
+ * Layered implementations of secondary methods for
+ * {@code HouseholdExpenseTracker}.
  */
 public abstract class HouseholdExpenseTrackerSecondary
-                                            implements HouseholdExpenseTracker {
+        implements HouseholdExpenseTracker {
     /**
      * avoid checkstyle for magic number.
      */
     private static final int TWELVE = 12, HUNDRED = 100, THREEONE = 31,
-                        MIN_YEARMONTH_PERVIOUS = 100101, THOUSANDONE = 1001,
-                         THOUSAND = 1000, HUNDREDTHOUSAND = 100000;
+            MIN_YEARMONTH_PERVIOUS = 100101, THOUSANDONE = 1001,
+            THOUSAND = 1000, HUNDREDTHOUSAND = 100000;
 
     /**
      * Report whether {@code yyyyMM} is a valid yearMonth.
@@ -37,14 +40,14 @@ public abstract class HouseholdExpenseTrackerSecondary
      * Add amount to the category in map.
      *
      * @param map
-     *          the aim map
+     *            the aim map
      * @param category
-     *          the specified category
+     *            the specified category
      * @param amount
-     *          the new amount to add
+     *            the new amount to add
      */
-    private static void addToCategory(Map<String, Double> map,
-                                                String category, double amount) {
+    private static void addToCategory(Map<String, Double> map, String category,
+            double amount) {
         assert category.length() > 0 : "Violation of: category is not empty";
 
         if (map.containsKey(category)) {
@@ -60,9 +63,8 @@ public abstract class HouseholdExpenseTrackerSecondary
      * Return the previous month of {@code yyyyMM}.
      *
      * @param yyyyMM
-     *          the specified month
-     * @return
-     *          the previous month of the specified month
+     *            the specified month
+     * @return the previous month of the specified month
      * @requires yyyyMM >= 100101
      * @requires (yyyyMM % 100) >= 1 and (yyyyMM % 100) <= 12
      *
@@ -263,7 +265,7 @@ public abstract class HouseholdExpenseTrackerSecondary
 
         for (int i = 0; i < this.size(); i++) {
             if (i > 0) {
-                result.append(", ");
+                result.append(",\n");
             }
             result.append(this.entry(i));
         }
@@ -286,7 +288,7 @@ public abstract class HouseholdExpenseTrackerSecondary
             }
 
             if (same) {
-                for (int i =  0; i < this.size(); i++) {
+                for (int i = 0; i < this.size(); i++) {
                     HouseholdExpense thisEntry = this.entry(i);
                     HouseholdExpense otherEntry = other.entry(i);
                     if (!thisEntry.equals(otherEntry)) {
